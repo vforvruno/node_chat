@@ -10,12 +10,15 @@ block content
   div(class="containe-fluid")
     div(class="row")
       div(class="col-md-6")
+        p(class="bg-danger" data-bind="text: errorMsg")
+    div(class="row")
+      div(class="col-md-6")
         div(class="panel panel-primary")
           div(class="panel-heading")
             h3(class="panel-title") Chat
           div(class="panel-body")
-            div(data-bind="foreach: messages")
-              div(class="message")
+            div(class="messages")
+              div(data-bind="foreach: messages")
                 span(data-bind="text: user")
                 strong :
                 span(data-bind="text: message")

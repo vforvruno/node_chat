@@ -42,7 +42,13 @@ var io = socketio.listen(server);
 
 io.sockets.on('connection', function (socket) {
   socket.on('messageToServer', function(text){
-  	console.log("broadcasting " + text);
-  	io.sockets.emit('newMessage', text);
+  	if(text.user === "") {
+  		socket.emit("error");
+  		console.log(text.user);
+  	}
+  	else {
+  		console.log("broadcasting " + text.user + ", " + text.message);
+   		io.sockets.emit('newMessage', text);
+    }
   });
 });
