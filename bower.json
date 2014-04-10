@@ -1,0 +1,24 @@
+{
+  "name": "chatsite",
+  "version": "0.0.0",
+  "authors": [
+    "Bruno Giacomelli <gvruno@gmail.com>"
+  ],
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0",
+    "knockout.js": "~3.0.0"
+  }
+}

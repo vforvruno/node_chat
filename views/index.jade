@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  script(src="/socket.io/socket.io.js")
+  script(src="/bower_components/jquery/dist/jquery.js")
+  script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+  script(src="/bower_components/knockout.js/knockout.js")
+  script(src="/javascripts/client.js")
+  link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+  div(class="containe-fluid")
+    div(class="row")
+      div(class="col-md-6")
+        div(class="panel panel-primary")
+          div(class="panel-heading")
+            h3(class="panel-title") Chat
+          div(class="panel-body")
+            div(data-bind="foreach: messages")
+              div(class="message")
+                span(data-bind="text: user")
+                strong :
+                span(data-bind="text: message")
+          div(class="panel-footer")
+            form(data-bind="submit: sendMessage")
+              div(class="row")
+                div(class="col-md-3")
+                  div(class="input-group")
+                    span(class="input-group-addon") @
+                    input(type="text", class="form-control", data-bind="value: username", placeholder="User")
+                div(class="col-md-9")
+                  div(class="input-group")
+                    input(type="text", class="form-control", data-bind="value: texto", placeholder="Message...")
+                    span(class="input-group-btn")
+                      button(class="btn btn-warning", type="submit") Send
