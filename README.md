@@ -1,11 +1,11 @@
--After cloning run:
+### -After cloning run:
 
-npm install && bower install
+> npm install && bower install
 
 to download dependencies.
 
--Then run:
+### -Then run:
 
-node app.js
+> node app.js
 
 and open http://localhost:3000 in your browser.
