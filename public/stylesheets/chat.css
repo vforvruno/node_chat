@@ -1,0 +1,5 @@
+.panel-body
+{
+    overflow-y: scroll;
+    height: 250px;
+}
